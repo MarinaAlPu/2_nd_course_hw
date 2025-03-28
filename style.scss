@@ -24,22 +24,9 @@ button {
 .top {
   height: 800px;
   background-color: #E1FF8F;
-  // background-image: url(./images/back/right_corner.svg);
+  // background-image: url('./images/back/top_back.svg');
   // background-repeat: no-repeat;
-  // background-position: 854px;
-  // background-size: cover;
-  // position: relative;
-
-  // &__stars-right {
-  //   width: 1074px;
-  //   height: 1130.457px;
-  //   background-image: url(./images/back/right_corner.svg);
-  //   background-repeat: no-repeat;
-  //   background-position: right;
-  //   background-size: cover;
-  //   position: absolute;
-  //   z-index: 2;
-  // }
+  // background-position: left 110px top -320px;
 
   &__content {
     max-width: 769px;
@@ -95,7 +82,7 @@ button {
 
   &__animated-strip {
     height: 87px;
-    background-image: url(./images/animated-strip.png);
+    background-image: url('./images/animated-strip.png');
     // overflow: hidden;
   }
 }
@@ -104,6 +91,9 @@ button {
   background-color: #202027;
   padding-top: 94px;
   padding-bottom: 50px;
+  // background-image: url('./images/about_games/big_star.svg');
+  // background-repeat: no-repeat;
+  // background-position: left 933px top 77px;
 
   &__title {
     color: #FFF;
@@ -150,6 +140,7 @@ button {
     width: 100%;
     border-radius: 30px;
     background-color: #fff;
+    transition: all 0.5s linear;
 
     &_small {
       height: 473px;
@@ -192,5 +183,10 @@ button {
       font-size: 32px;
       font-weight: 700;
     }
+  }
+
+  &__card:hover {
+    transform: scale(1.05);
+    transition: all 0.2s linear;
   }
 }
