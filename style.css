@@ -126,4 +126,26 @@ button {
 }
 .about-games__card_big {
   height: 551px;
+}
+.about-games__card-image_small-1 {
+  border-radius: 30px;
+}
+.about-games__card-description {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+}
+.about-games__card-description_small {
+  gap: 26px;
+}
+.about-games__card-number {
+  color: #202027;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 110%;
+}
+.about-games__card-name {
+  color: #202027;
+  font-size: 32px;
+  font-weight: 700;
 }/*# sourceMappingURL=style.css.map */

@@ -157,17 +157,45 @@ button {
     width: 100%;
     border-radius: 30px;
     background-color: #fff;
-  }
 
-  &__card_small {
-    height: 473px;
-  }
+    &_small {
+      height: 473px;
+    }
 
-  &__card_medium {
-    height: 512px;
-  }
+    &_medium {
+      height: 512px;
+    }
 
-  &__card_big {
-    height: 551px;
+    &_big {
+      height: 551px;
+    }
+
+    &-image_small-1 {
+      border-radius: 30px;
+    }
+
+    &-description {
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
+
+      &_small {
+        gap: 26px;
+      }
+    }
+
+    &-number {
+      color: #202027;
+      // font-variant-numeric: lining-nums proportional-nums;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 110%;
+    }
+
+    &-name {
+      color: #202027;
+      font-size: 32px;
+      font-weight: 700;
+    }
   }
 }
