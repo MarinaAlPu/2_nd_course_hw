@@ -127,9 +127,6 @@ button {
 .about-games__card_big {
   height: 551px;
 }
-.about-games__card-image_small-1 {
-  border-radius: 30px;
-}
 .about-games__card-description {
   padding: 32px;
   display: flex;
