@@ -68,16 +68,8 @@ button {
   transition: all 0.2s linear;
 }
 .top__animated-strip {
-  background: #BCEC30;
-  color: #202027;
-  font-size: 30px;
-  font-weight: 700;
-  line-height: 110%;
-  letter-spacing: 1.2px;
-  text-transform: uppercase;
-  padding-top: 27px;
-  padding-bottom: 27px;
-  text-align: center;
+  height: 87px;
+  background-image: url(./images/animated-strip.png);
 }
 
 .about-games {
@@ -127,19 +119,24 @@ button {
 .about-games__card_big {
   height: 551px;
 }
+.about-games__card-picture {
+  width: 100%;
+}
 .about-games__card-description {
-  padding: 32px;
+  padding: 32px 32px 36px 32px;
   display: flex;
   flex-direction: column;
 }
-.about-games__card-description_small {
-  gap: 26px;
+.about-games__card-description_4 {
+  padding-right: 45px;
 }
 .about-games__card-number {
   color: #202027;
   font-size: 16px;
   font-weight: 500;
   line-height: 110%;
+  padding: 8px 16px 10px 16px;
+  margin-bottom: 16px;
 }
 .about-games__card-name {
   color: #202027;

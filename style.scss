@@ -94,16 +94,9 @@ button {
   }
 
   &__animated-strip {
-    background: #BCEC30;
-    color: #202027;
-    font-size: 30px;
-    font-weight: 700;
-    line-height: 110%;
-    letter-spacing: 1.2px;
-    text-transform: uppercase;
-    padding-top: 27px;
-    padding-bottom: 27px;
-    text-align: center;
+    height: 87px;
+    background-image: url(./images/animated-strip.png);
+    // overflow: hidden;
   }
 }
 
@@ -170,13 +163,17 @@ button {
       height: 551px;
     }
 
+    &-picture {
+      width: 100%;
+    }
+
     &-description {
-      padding: 32px;
+      padding: 32px 32px 36px 32px;
       display: flex;
       flex-direction: column;
 
-      &_small {
-        gap: 26px;
+      &_4 {
+        padding-right: 45px;
       }
     }
 
@@ -186,6 +183,8 @@ button {
       font-size: 16px;
       font-weight: 500;
       line-height: 110%;
+      padding: 8px 16px 10px 16px;
+      margin-bottom: 16px;
     }
 
     &-name {
