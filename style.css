@@ -24,6 +24,8 @@ button {
 .top {
   height: 800px;
   background-color: #E1FF8F;
+  background-image: url("./images/back/top_back.png");
+  background-repeat: no-repeat;
 }
 .top__content {
   max-width: 769px;
@@ -70,12 +72,16 @@ button {
 .top__animated-strip {
   height: 87px;
   background-image: url("./images/animated-strip.png");
+  margin-top: -87px;
 }
 
 .about-games {
   background-color: #202027;
   padding-top: 94px;
   padding-bottom: 50px;
+  background-image: url("./images/about_games/stars.png");
+  background-repeat: no-repeat;
+  background-position: 25px 77px;
 }
 .about-games__title {
   color: #FFF;

@@ -24,9 +24,11 @@ button {
 .top {
   height: 800px;
   background-color: #E1FF8F;
-  // background-image: url('./images/back/top_back.svg');
-  // background-repeat: no-repeat;
-  // background-position: left 110px top -320px;
+  background-image: url('./images/back/top_back.png');
+  background-repeat: no-repeat;
+  // background-position: 0px 15px;
+  // background-position: center;
+  // background-size: 100%;
 
   &__content {
     max-width: 769px;
@@ -34,6 +36,17 @@ button {
     // flex-direction: column;
     // align-items: flex-start;
     padding-top: 196px;
+    // background-image: url('./images/back/top_back.svg');
+    // background-repeat: no-repeat;
+    // // background-position: left 110px top -300px;
+    // background-position: center;
+    // // background-size: cover;
+
+    // background-image: url('./images/back/big_green_star.svg');
+    // background-repeat: no-repeat;
+    // background-position: -10px 102px;
+    // position: relative;
+    // z-index: 2;
   }
 
   &__title {
@@ -84,6 +97,7 @@ button {
     height: 87px;
     background-image: url('./images/animated-strip.png');
     // overflow: hidden;
+    margin-top: -87px;
   }
 }
 
@@ -91,9 +105,9 @@ button {
   background-color: #202027;
   padding-top: 94px;
   padding-bottom: 50px;
-  // background-image: url('./images/about_games/big_star.svg');
-  // background-repeat: no-repeat;
-  // background-position: left 933px top 77px;
+  background-image: url('./images/about_games/stars.png');
+  background-repeat: no-repeat;
+  background-position: 25px 77px;
 
   &__title {
     color: #FFF;
@@ -113,14 +127,6 @@ button {
       margin-bottom: 72px;
     }
   }
-
-  // &__description:last-child {
-  //   margin-bottom: 72px;
-  // }
-
-  // &__description-wrapper {
-  //   margin-bottom: 72px;
-  // }
 
   &__content {
     display: grid;
@@ -163,6 +169,7 @@ button {
       display: flex;
       flex-direction: column;
 
+      // чтобы название было в столбик
       &_4 {
         padding-right: 45px;
       }
