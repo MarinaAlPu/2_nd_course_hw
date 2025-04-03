@@ -26,7 +26,7 @@ button {
   background-color: #E1FF8F;
   background-image: url("./images/back/big_star.svg"), url("./images/back/stars_group_left.svg"), url("./images/back/stars_group_right.svg");
   background-repeat: no-repeat, no-repeat, no-repeat;
-  background-position: 854px, 63px 69px, 948px 538px;
+  background-position: right, 63px 69px, 948px 538px;
 }
 .top__content {
   max-width: 769px;
@@ -72,10 +72,16 @@ button {
 }
 
 .animated-strip {
+  width: 100%;
+  height: 87px;
+  overflow: hidden;
+  margin-top: -87px;
+}
+
+.animated-strip__content {
   width: 3220px;
   background-color: #BCEC30;
   border: 1px solid rgba(255, 255, 255, 0.2);
-  margin-top: -87px;
   color: #202027;
   font-size: 30px;
   font-weight: 700;
@@ -88,13 +94,7 @@ button {
   justify-content: center;
   align-items: center;
   gap: 51px;
-  overflow: hidden;
-}
-.animated-strip__star {
-  background-image: url("./images/star_for_animated_strip.svg");
-  background-repeat: no-repeat;
-  width: 36px;
-  height: 36px;
+  z-index: 2;
 }
 
 .about-games {
@@ -103,7 +103,7 @@ button {
   padding-bottom: 50px;
   background-image: url("./images/about_games/stars_group.svg"), url("./images/about_games/star_big.svg");
   background-repeat: no-repeat, no-repeat;
-  background-position: 25px 770px, 985px 77px;
+  background-position: 25px 770px, right 77px;
 }
 .about-games__title {
   color: #FFF;
