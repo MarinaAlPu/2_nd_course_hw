@@ -28,6 +28,9 @@ button {
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-position: right, 63px 69px, right 344px bottom 149px;
 }
+.top-mobile {
+  display: none;
+}
 .top__content {
   max-width: 769px;
   padding-top: 196px;
@@ -77,7 +80,6 @@ button {
   overflow: hidden;
   margin-top: -87px;
 }
-
 .animated-strip__content {
   width: 3220px;
   background-color: #BCEC30;
@@ -175,4 +177,87 @@ button {
 .about-games__card:hover {
   transform: scale(1.05);
   transition: all 0.2s linear;
+}
+
+@media (max-width: 376px) {
+  .center {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .top {
+    display: none;
+  }
+  .top-mobile {
+    display: block;
+    height: 700px;
+    background-color: #E1FF8F;
+    background-image: url("./images/mobile/top_big_star.svg"), url("./images/mobile/top_left_stars_group.svg"), url("./images/mobile/top_right_stars_group.svg");
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: top right, 37px 64px, right 34px bottom 79px;
+  }
+  .top-mobile__content {
+    padding-top: 147px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .top-mobile__title {
+    color: #202027;
+    font-weight: 700;
+    margin-bottom: 24px;
+    font-size: 40px;
+    text-align: center;
+    max-width: 296px;
+  }
+  .top-mobile__description-wrapper-mobile {
+    margin-bottom: 36px;
+    text-align: center;
+    max-width: 296px;
+  }
+  .top-mobile__description {
+    font-size: 16px;
+    line-height: normal;
+    color: #202027;
+    font-weight: 400;
+  }
+  .top-mobile__description_link {
+    font-weight: 600;
+  }
+  .top-mobile__button {
+    display: block;
+    padding: 16px 28px;
+    width: 285px;
+    height: 55px;
+    border-radius: 60px;
+    border: 1px solid #202027;
+    background: #202027;
+    color: #FFF;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 141.688%;
+  }
+  .animated-strip {
+    height: 52px;
+    margin-top: -52px;
+  }
+  .animated-strip__content {
+    width: 1717px;
+    border: 0.5px solid rgba(255, 255, 255, 0.2);
+    font-size: 16px;
+    line-height: 110%;
+    letter-spacing: 0.64px;
+    padding: 16px;
+    gap: 27px;
+  }
+  .animated-strip__star {
+    height: 19px;
+    width: 19px;
+  }
+  .about-games {
+    display: none;
+  }
 }/*# sourceMappingURL=style.css.map */
