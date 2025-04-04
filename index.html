@@ -1,11 +1,113 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mini-games</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  
+  <div class="top center">
+    <div class="top__content">
+      <h1 class="top__title">Добро пожаловать<br>на мой сайт мини-игр</h1>
+      <div class="top__description-wrapper">
+        <p class="top__description">Тебе предстоит пройти несколько увлекательных игр.</p>
+        <p class="top__description">Если готов, нажимай
+          <a class="top__description top__description_link" href="#about-games">«Поехали!»</a> и
+          <a class="top__description top__description_link" href="#about-games">приступай</a> .
+        </p>
+      </div>
+      <a class="top__button" href="#about-games">Поехали!</a>
+    </div>
+  </div>
+
+  <div class="animated-strip">
+    <div class="animated-strip__content">
+      <p class="animated-strip__item">Викторина</p>
+      <img src="./images/star_for_animated_strip.svg" alt="Маленькая чёрная звёздочка">
+      <p class="animated-strip__item">Угадай число</p>
+      <img src="./images/star_for_animated_strip.svg" alt="Маленькая чёрная звёздочка">
+      <p class="animated-strip__item">Переверни текст</p>
+      <img src="./images/star_for_animated_strip.svg" alt="Маленькая чёрная звёздочка">
+      <p class="animated-strip__item">Простая арифметика</p>
+      <img src="./images/star_for_animated_strip.svg" alt="Маленькая чёрная звёздочка">
+      <p class="animated-strip__item">Камень, ножницы, бумага</p>
+      <img src="./images/star_for_animated_strip.svg" alt="Маленькая чёрная звёздочка">
+      <p class="animated-strip__item">Генератор случайных цветов</p>
+      <img src="./images/star_for_animated_strip.svg" alt="Маленькая чёрная звёздочка">
+    </div>
+  </div>
+
+  <section id="about-games" class="about-games center">
+    <header class="about-games__header">
+      <h2 class="about-games__title">Об играх</h2>
+      <p class="about-games__description">В моей коллекции представлено 6 игр на разные темы.</p>
+      <p class="about-games__description">Игры несложные — в них может поиграть каждый.</p>
+      <p class="about-games__description">Все игры доступны для пользования.</p>
+    </header>
+    <div class="about-games__content">
+      <div class="about-games__column">
+        <a href="#" id="game_1" class="about-games__card about-games__card_small">
+          <img class="about-games__card-picture" src="./images/cards/card_1.png" alt="Обложка игры 1">
+          <div class="about-games__card-description about-games__card-description_small">
+            <p class="about-games__card-number about-games__card-number_small">Игра № 1</p>
+            <p class="about-games__card-name">Угадай число</p>
+          </div>
+        </a>
+        <a href="#" id="game_4" class="about-games__card about-games__card_big">
+          <img class="about-games__card-picture" src="./images/cards/card_4.png" alt="Обложка игры 4">
+          <div class="about-games__card-description about-games__card-description_4">
+            <p class="about-games__card-number">Игра № 4</p>
+            <p class="about-games__card-name">Камень, ножницы, бумага</p>
+          </div>
+        </a>
+      </div>
+      <div class="about-games__column">
+        <a href="#" id="game_2" class="about-games__card about-games__card_medium">
+          <img class="about-games__card-picture" src="./images/cards/card_2.png" alt="Обложка игры 2">
+          <div class="about-games__card-description">
+            <p class="about-games__card-number">Игра № 2</p>
+            <p class="about-games__card-name">Простая арифметика</p>
+          </div>
+        </a>
+        <a href="#" id="game_5" class="about-games__card about-games__card_medium">
+          <img class="about-games__card-picture" src="./images/cards/card_5.png" alt="Обложка игры 5">
+          <div class="about-games__card-description">
+            <p class="about-games__card-number about-games__card-number_medium">Игра № 5</p>
+            <p class="about-games__card-name">Простая викторина</p>
+          </div>
+        </a>
+      </div>
+      <div class="about-games__column">
+        <a href="#" id="game_3" class="about-games__card about-games__card_small about-games__card_small-3">
+          <img class="about-games__card-picture about-games__card-picture_3" src="./images/cards/card_3.png"
+            alt="Обложка игры 3">
+          <div class="about-games__card-description about-games__card-description_small">
+            <p class="about-games__card-number about-games__card-number_small">Игра № 3</p>
+            <p class="about-games__card-name">Переверни текст</p>
+          </div>
+        </a>
+        <a href="#" id="game_6" class="about-games__card about-games__card_big">
+          <img class="about-games__card-picture" src="./images/cards/card_6.png" alt="Обложка игры 6">
+          <div class="about-games__card-description">
+            <p class="about-games__card-number">Игра № 6</p>
+            <p class="about-games__card-name">Генератор случайных цветов</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+  <section id="mini-games" class="mini-games center">
+
+  </section>
+  <footer class="footer center">
+
+  </footer>
 </body>
+
 </html>
