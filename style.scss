@@ -28,6 +28,10 @@ button {
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-position: right, 63px 69px, right 344px bottom 149px;
 
+  &-mobile {
+    display: none;
+  }
+
   &__content {
     max-width: 769px;
     padding-top: 196px;
@@ -84,38 +88,26 @@ button {
   height: 87px;
   overflow: hidden;
   margin-top: -87px;
-  // position: relative;
-  // z-index: 1;
-}
 
-.animated-strip__content {
-  width: 3220px;
-  // height: 87px;
-  background-color: #BCEC30;
-  border: 1px solid rgba(255, 255, 255, 0.20);
-  // margin-top: -87px;
-  color: #202027;
-  font-size: 30px;
-  font-weight: 700;
-  line-height: 110%;
-  letter-spacing: 1.2px;
-  text-transform: uppercase;
-  padding: 27px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 51px;
-  // overflow: hidden;
-  // position: absolute;
-  z-index: 2;
-
-  // &__star {
-  //   background-image: url('./images/star_for_animated_strip.svg');
-  //   background-repeat: no-repeat;
-  //   width: 36px;
-  //   height: 36px;
-  // }
+  &__content {
+    width: 3220px;
+    background-color: #BCEC30;
+    border: 1px solid rgba(255, 255, 255, 0.20);
+    color: #202027;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 110%;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    padding: 27px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 51px;
+    // position: absolute;
+    z-index: 2;
+  }
 }
 
 .about-games {
@@ -214,3 +206,5 @@ button {
     transition: all 0.2s linear;
   }
 }
+
+@import 'mobile';
