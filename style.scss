@@ -272,7 +272,14 @@ button {
       font-size: 24px;
       font-weight: 600;
       line-height: 141.688%;
-      /* 34.005px */
+      transition: all 0.5s linear;
+
+      &:hover {
+        background-color: #FFFFFF;
+        border: 1px solid #000;
+        color: #202027;
+        transition: all 0.2s linear;
+      }
     }
 
     &-picture {
