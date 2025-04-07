@@ -171,6 +171,7 @@ button {
 
     &-picture {
       width: 100%;
+      border-radius: 30px;
     }
 
     &-description {
@@ -204,6 +205,81 @@ button {
   &__card:hover {
     transform: scale(1.05);
     transition: all 0.2s linear;
+  }
+}
+
+.mini-games {
+  background-color: #202027;
+  background-image: url('./images/mini_games/top_stars_group.svg'), url('./images/mini_games/bottom_stars_group.svg');
+  background-repeat: no-repeat, no-repeat;
+  background-position: top 93px right 45px, bottom 45px right 52px;
+  padding-top: 46px;
+
+  &__title {
+    color: #FFF;
+    font-size: 64px;
+    font-weight: 700;
+    margin-bottom: 72px;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 32px;
+    padding-bottom: 144px;
+  }
+
+  &__card {
+    height: 500px;
+    grid-column: span 12;
+    width: 100%;
+    border-radius: 30px;
+    background-color: #fff;
+    display: flex;
+
+    &-content {
+      padding: 48px;
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-content: flex-start;
+      align-items: flex-start;
+    }
+
+    &-name {
+      color: #202027;
+      font-size: 48px;
+      font-weight: 700;
+      margin-bottom: 24px;
+    }
+
+    &-description {
+      color: #202027;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 32px;
+      margin-bottom: 36px;
+    }
+
+    &-button {
+      border-radius: 60px;
+      background-color: #202027;
+      width: 247px;
+      padding: 16px 28px;
+      color: #FFF;
+      text-align: center;
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 141.688%;
+      /* 34.005px */
+    }
+
+    &-picture {
+      width: 50%;
+      height: 100%;
+      border-radius: 30px;
+    }
   }
 }
 
