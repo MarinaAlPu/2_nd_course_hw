@@ -179,6 +179,18 @@ button {
   transition: all 0.2s linear;
 }
 
+.footer {
+  height: 150px;
+  background-color: #BDED35;
+  padding-top: 61px;
+}
+.footer__title {
+  color: #000;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+}
+
 @media (max-width: 375px) {
   .center {
     padding-left: 16px;
