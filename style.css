@@ -346,4 +346,17 @@ button {
   .about-games {
     display: none;
   }
+}
+@media (hover: hover) {
+  .mini-games__card-button:hover {
+    background-color: #FFFFFF;
+    border: 1px solid #000;
+    color: #202027;
+  }
+}
+@media (hover: none) {
+  .mini-games__card-button:hover {
+    background-color: inherit;
+    color: inherit;
+  }
 }/*# sourceMappingURL=style.css.map */
