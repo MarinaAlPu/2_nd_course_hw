@@ -101,15 +101,6 @@
   .mini-games {
     display: none;
   }
-
-  // .footer {
-  //   height: 100px;
-  //   padding-top: 40px;
-
-  //   &__title {
-  //     font-size: 16px;
-  //   }
-  // }
 }
 
 @media (max-width: 426px) {
@@ -206,14 +197,6 @@
     }
   }
 
-  // .about-games {
-  //   display: none;
-  // }
-
-  // .mini-games {
-  //   display: none;
-  // }
-
   .footer {
     height: 100px;
     padding-top: 40px;
@@ -229,10 +212,6 @@
     padding-left: 16px;
     padding-right: 16px;
   }
-
-  // .top {
-  //   display: none;
-  // }
 
   .top-mobile {
     display: block;
@@ -315,19 +294,6 @@
     &__star {
       height: 19px;
       width: 19px;
-    }
-  }
-
-  .about-games {
-    display: none;
-  }
-
-  .footer {
-    height: 100px;
-    padding-top: 40px;
-
-    &__title {
-      font-size: 16px;
     }
   }
 }

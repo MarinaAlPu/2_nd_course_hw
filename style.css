@@ -511,16 +511,6 @@ button {
     height: 19px;
     width: 19px;
   }
-  .about-games {
-    display: none;
-  }
-  .footer {
-    height: 100px;
-    padding-top: 40px;
-  }
-  .footer__title {
-    font-size: 16px;
-  }
 }
 @media (hover: hover) {
   .mini-games__card-button:hover {
@@ -570,7 +560,7 @@ button {
     padding-top: 50px;
     padding-bottom: 40px;
     background-image: url("./images/about_games/stars_group.svg");
-    background-position: 10px 525px;
+    background-position: 10px 535px;
   }
   .about-games__title {
     font-size: 52px;
@@ -751,16 +741,5 @@ button {
     padding: 14px 28px;
     font-size: 22px;
     line-height: 120%;
-  }
-  .footer {
-    height: 150px;
-    background-color: #BDED35;
-    padding-top: 61px;
-  }
-  .footer__title {
-    color: #000;
-    text-align: center;
-    font-size: 24px;
-    font-weight: 600;
   }
 }/*# sourceMappingURL=style.css.map */
