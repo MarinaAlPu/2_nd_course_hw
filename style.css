@@ -428,6 +428,12 @@ button {
     height: 19px;
     width: 19px;
   }
+  .about-games {
+    display: none;
+  }
+  .mini-games {
+    display: none;
+  }
   .footer {
     height: 100px;
     padding-top: 40px;
