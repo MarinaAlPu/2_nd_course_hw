@@ -1,0 +1,289 @@
+@media (min-width: 1025px) and (max-width: 1200px) {
+  // .center {
+  //   padding-left: 8%;
+  //   padding-right: 8%;
+  //   // padding-left: calc(50% - 600px);
+  //   // padding-right: calc(50% - 600px);
+  // }
+
+  .top {
+    // height: 800px;
+    // background-color: #E1FF8F;
+    background-image: url('./images/back/big_star.svg'), url('./images/back/stars_group_left.svg'), url('./images/back/stars_group_right.svg');
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: right -50px top 0px, 63px 69px, right 344px bottom 149px;
+
+    // &-mobile {
+    //   display: none;
+    // }
+
+    &__content {
+      max-width: 650px;
+      padding-top: 196px;
+    }
+
+    &__title {
+      // color: #202027;
+      font-size: 54px;
+      // font-weight: 700;
+      margin-bottom: 24px;
+    }
+
+    &__description-wrapper {
+      margin-bottom: 48px;
+    }
+
+    &__description {
+      // color: #202027;
+      font-size: 22px;
+      // font-weight: 400;
+      line-height: 32px;
+
+      // &_link {
+      //   font-weight: 600;
+      // }
+    }
+
+    &__button {
+      // display: block;
+      // padding: 16px 28px;
+      // width: 247px;
+      // height: 66px;
+      // border-radius: 60px;
+      // border: 1px solid #202027;
+      // background: #202027;
+      // color: #FFF;
+      // text-align: center;
+      font-size: 22px;
+      // font-weight: 600;
+      // line-height: 141.688%;
+      // transition: all 0.5s linear;
+    }
+
+    // &__button:hover {
+    //   background: #fff;
+    //   color: #202027;
+    //   transition: all 0.2s linear;
+    // }
+
+  }
+
+  // .animated-strip {
+  //   width: 100%;
+  //   height: 87px;
+  //   overflow: hidden;
+  //   margin-top: -87px;
+
+  //   &__content {
+  //     width: 3220px;
+  //     background-color: #BCEC30;
+  //     border: 1px solid rgba(255, 255, 255, 0.20);
+  //     color: #202027;
+  //     font-size: 30px;
+  //     font-weight: 700;
+  //     line-height: 110%;
+  //     letter-spacing: 1.2px;
+  //     text-transform: uppercase;
+  //     padding: 27px;
+  //     display: flex;
+  //     flex-direction: row;
+  //     justify-content: center;
+  //     align-items: center;
+  //     gap: 51px;
+  //     // position: absolute;
+  //     z-index: 2;
+  //   }
+  // }
+
+  .about-games {
+    // background-color: #202027;
+    padding-top: 60px;
+    padding-bottom: 40px;
+    background-image: url('./images/about_games/stars_group.svg'), url('./images/about_games/star_big.svg');
+    // background-repeat: no-repeat, no-repeat;
+    background-position: 25px 650px, right -100px top 50px;
+
+    &__title {
+      // color: #FFF;
+      font-size: 54px;
+      // font-weight: 700;
+      // padding-top: 94px;
+      margin-bottom: 24px;
+    }
+
+    &__description {
+      // color: #FFF;
+      font-size: 22px;
+      // font-weight: 400;
+      line-height: 30px;
+
+      &:last-child {
+        margin-bottom: 50px;
+      }
+    }
+
+    &__content {
+      // display: grid;
+      // grid-template-columns: repeat(12, 1fr);
+      column-gap: 30px;
+    }
+
+    &__column {
+      grid-column: span 4;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    &__card {
+      // display: block;
+      // width: 100%;
+      // border-radius: 30px;
+      // background-color: #fff;
+      // transition: all 0.5s linear;
+
+      &_small {
+        height: 430px;
+      }
+
+      &_medium {
+        height: 460px;
+      }
+
+      &_big {
+        height: 490px;
+      }
+
+      // &-picture {
+      //   width: 100%;
+      //   border-radius: 30px;
+      // }
+
+      &-description {
+        padding: 28px 28px 32px 28px;
+        // display: flex;
+        // flex-direction: column;
+
+        // чтобы название было в столбик
+        &_4 {
+          padding-right: 50px;
+        }
+      }
+
+      &-number {
+        // color: #202027;
+        font-size: 14px;
+        // font-weight: 500;
+        // line-height: 110%;
+        // padding: 8px 16px 10px 16px;
+        margin-bottom: 14px;
+      }
+
+      &-name {
+        // color: #202027;
+        font-size: 30px;
+        // font-weight: 700;
+      }
+    }
+
+    // &__card:hover {
+    //   transform: scale(1.05);
+    //   transition: all 0.2s linear;
+    // }
+  }
+
+  .mini-games {
+    // background-color: #202027;
+    // background-image: url('./images/mini_games/top_stars_group.svg'), url('./images/mini_games/bottom_stars_group.svg');
+    // background-repeat: no-repeat, no-repeat;
+    background-position: top 40px right 45px, bottom 20px right 52px;
+    padding-top: 40px;
+
+    &__title {
+      // color: #FFF;
+      font-size: 54px;
+      // font-weight: 700;
+      margin-bottom: 60px;
+    }
+
+    &__content {
+      // display: grid;
+      // grid-template-columns: repeat(12, 1fr);
+      gap: 30px;
+      padding-bottom: 120px;
+    }
+
+    &__card {
+      height: 450px;
+      // grid-column: span 12;
+      // width: 100%;
+      // border-radius: 30px;
+      // background-color: #fff;
+      // display: flex;
+
+      &-content {
+        padding: 42px;
+        // width: 50%;
+        // display: flex;
+        // flex-direction: column;
+        // flex-wrap: wrap;
+        // align-content: flex-start;
+        // align-items: flex-start;
+      }
+
+      &-name {
+        // color: #202027;
+        font-size: 42px;
+        // font-weight: 700;
+        margin-bottom: 22px;
+      }
+
+      &-description {
+        // color: #202027;
+        font-size: 22px;
+        // font-weight: 400;
+        // line-height: 32px;
+        margin-bottom: 34px;
+      }
+
+      &-button {
+        // border-radius: 60px;
+        // background-color: #202027;
+        // width: 247px;
+        padding: 14px 28px;
+        // color: #FFF;
+        // text-align: center;
+        font-size: 22px;
+        // font-weight: 600;
+        line-height: 120%;
+        // transition: all 0.5s linear;
+
+        // &:hover {
+        //   background-color: #FFFFFF;
+        //   border: 1px solid #000;
+        //   color: #202027;
+        //   transition: all 0.2s linear;
+        // }
+      }
+
+      // &-picture {
+      //   width: 50%;
+      //   height: 100%;
+      //   border-radius: 30px;
+      // }
+    }
+  }
+
+  .footer {
+    height: 150px;
+    background-color: #BDED35;
+    padding-top: 61px;
+
+    &__title {
+      color: #000;
+      text-align: center;
+      font-size: 24px;
+      font-weight: 600;
+    }
+  }
+}
