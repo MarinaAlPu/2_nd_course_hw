@@ -17,8 +17,10 @@ button {
 }
 
 .center {
-  padding-left: calc(50% - 600px);
-  padding-right: calc(50% - 600px);
+  padding-left: 8%;
+  padding-right: 8%;
+  // padding-left: calc(50% - 600px);
+  // padding-right: calc(50% - 600px);
 }
 
 .top {
@@ -304,3 +306,5 @@ button {
 }
 
 @import 'mobile';
+@import 'tablet';
+@import 'desktop';
