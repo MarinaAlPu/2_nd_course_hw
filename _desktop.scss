@@ -1,4 +1,11 @@
-@media (min-width: 1025px) and (max-width: 1200px) {
+@media (min-width: 1025px) and (max-width: 1300px) {
+  .center {
+    // padding-left: 8%;
+    // padding-right: 8%;
+    padding-left: calc(50% - 500px);
+    padding-right: calc(50% - 500px);
+  }
+
   .top {
     // height: 800px;
     // background-color: #E1FF8F;

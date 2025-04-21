@@ -21,8 +21,8 @@ button {
 }
 
 .center {
-  padding-left: 8%;
-  padding-right: 8%;
+  padding-left: calc(50% - 600px);
+  padding-right: calc(50% - 600px);
 }
 
 .top {
@@ -351,7 +351,58 @@ button {
     display: none;
   }
   .mini-games {
-    display: none;
+    background-image: none;
+    padding-top: 48px;
+  }
+  .mini-games__title {
+    font-size: 40px;
+    margin-bottom: 48px;
+  }
+  .mini-games__content {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 24px;
+    padding-bottom: 48px;
+  }
+  .mini-games__card {
+    height: auto;
+    grid-column: span 4;
+    width: 100%;
+    flex-direction: column-reverse;
+  }
+  .mini-games__card-reverse {
+    flex-direction: column;
+  }
+  .mini-games__card-content {
+    padding: 29px 29px 32px 29px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    align-items: flex-start;
+  }
+  .mini-games__card-name {
+    font-size: 32px;
+    margin-bottom: 16px;
+  }
+  .mini-games__card-description {
+    font-size: 16px;
+    line-height: normal;
+    margin-bottom: 32px;
+  }
+  .mini-games__card-button {
+    width: 100%;
+    font-size: 16px;
+  }
+  .mini-games__card-picture {
+    width: 100%;
+    height: 285px;
+  }
+}
+@media (min-width: 426px) and (max-width: 700px) {
+  .mini-games__content {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 @media (max-width: 426px) {
@@ -436,7 +487,53 @@ button {
     display: none;
   }
   .mini-games {
-    display: none;
+    background-image: none;
+    padding-top: 48px;
+  }
+  .mini-games__title {
+    font-size: 40px;
+    margin-bottom: 48px;
+  }
+  .mini-games__content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    padding-bottom: 48px;
+  }
+  .mini-games__card {
+    height: auto;
+    grid-column: span 4;
+    width: 100%;
+    flex-direction: column-reverse;
+  }
+  .mini-games__card-reverse {
+    flex-direction: column;
+  }
+  .mini-games__card-content {
+    padding: 29px 29px 32px 29px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    align-items: flex-start;
+  }
+  .mini-games__card-name {
+    font-size: 32px;
+    margin-bottom: 16px;
+  }
+  .mini-games__card-description {
+    font-size: 16px;
+    line-height: normal;
+    margin-bottom: 32px;
+  }
+  .mini-games__card-button {
+    width: 100%;
+    font-size: 16px;
+  }
+  .mini-games__card-picture {
+    width: 100%;
+    height: 285px;
   }
   .footer {
     height: 100px;
@@ -648,7 +745,11 @@ button {
     font-size: 22px;
   }
 }
-@media (min-width: 1025px) and (max-width: 1200px) {
+@media (min-width: 1025px) and (max-width: 1300px) {
+  .center {
+    padding-left: calc(50% - 500px);
+    padding-right: calc(50% - 500px);
+  }
   .top {
     background-image: url("./images/back/big_star.svg"), url("./images/back/stars_group_left.svg"), url("./images/back/stars_group_right.svg");
     background-repeat: no-repeat, no-repeat, no-repeat;
