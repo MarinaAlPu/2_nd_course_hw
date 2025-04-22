@@ -173,6 +173,10 @@ button {
   line-height: 110%;
   padding: 8px 16px 10px 16px;
   margin-bottom: 16px;
+  border-radius: 52px;
+  background: #F7F7F7;
+  text-align: center;
+  width: 108px;
 }
 .about-games__card-name {
   color: #202027;
@@ -397,7 +401,6 @@ button {
   }
   .mini-games__card-picture {
     width: 100%;
-    height: 285px;
   }
 }
 @media (min-width: 426px) and (max-width: 700px) {
@@ -533,7 +536,6 @@ button {
   }
   .mini-games__card-picture {
     width: 100%;
-    height: 285px;
   }
   .footer {
     height: 100px;
