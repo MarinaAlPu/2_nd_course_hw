@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
 }
@@ -17,10 +21,10 @@ button {
 }
 
 .center {
-  padding-left: 8%;
-  padding-right: 8%;
-  // padding-left: calc(50% - 600px);
-  // padding-right: calc(50% - 600px);
+  // padding-left: 8%;
+  // padding-right: 8%;
+  padding-left: calc(50% - 600px);
+  padding-right: calc(50% - 600px);
 }
 
 .top {
@@ -189,12 +193,15 @@ button {
 
     &-number {
       color: #202027;
-      // font-variant-numeric: lining-nums proportional-nums;
       font-size: 16px;
       font-weight: 500;
       line-height: 110%;
       padding: 8px 16px 10px 16px;
       margin-bottom: 16px;
+      border-radius: 52px;
+      background: #F7F7F7;
+      text-align: center;
+      width: 108px;
     }
 
     &-name {
