@@ -88,8 +88,8 @@ function simpleArithmetic() {
     let operation = mathOperations[indexForMathOperation];
     // console.log(operation);
 
-    // let task = String(number1) + " " + operation + " " + String(number2);
-    let task = String(3) + "-" + String(3);
+    let task = String(number1) + " " + operation + " " + String(number2);
+    // let task = String(3) + "-" + String(3);
 
 
     switch (indexForMathOperation) {
@@ -111,8 +111,8 @@ function simpleArithmetic() {
         break;
     }
     answer = 0;
-    console.log("\nЭто answer:");
-    console.log(answer);
+    // console.log("\nЭто answer:");
+    // console.log(answer);
 
     let userAnswerForChecks = (prompt(`Решите задачу:\n${task} =\nОтвет впишите в поле ниже`)).trim();
     // let userAnswer = Number(prompt(`Решите задачу:\n${task} =\nОтвет впишите в поле ниже`));
@@ -122,9 +122,9 @@ function simpleArithmetic() {
       break;
     }
 
-    console.log("\nЭто ответ пользователя до проверки");
-    console.log(userAnswerForChecks);
-    console.log(typeof(userAnswerForChecks));
+    // console.log("\nЭто ответ пользователя до проверки");
+    // console.log(userAnswerForChecks);
+    // console.log(typeof(userAnswerForChecks));
 
     if (userAnswerForChecks.includes(',')) {
       userAnswerForChecks = userAnswerForChecks.replace(',', '.');
@@ -140,7 +140,6 @@ function simpleArithmetic() {
       // console.log("\nЭто ответ пользователя после округления");
       // console.log(userAnswer);
     } else {
-      userAnswer = Number("\nЭто ответ пользователя в Number");
       userAnswer = Number(userAnswerForChecks);
     }
 
