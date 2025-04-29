@@ -176,7 +176,8 @@ button {
   border-radius: 52px;
   background: #F7F7F7;
   text-align: center;
-  width: 108px;
+  width: -moz-max-content;
+  width: max-content;
 }
 .about-games__card-name {
   color: #202027;
