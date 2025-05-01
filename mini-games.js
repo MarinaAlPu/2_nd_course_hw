@@ -80,7 +80,8 @@ function simpleArithmetic() {
     let number1 = randomNumber();
     let number2 = randomNumber();
     let answer;
-    let userAnswer = "";
+    let userAnswer;
+    let userAnswerForChecks;
 
     let indexForMathOperation = Math.round(Math.random() * 3);
     // console.log(indexForMathOperation);
@@ -106,48 +107,83 @@ function simpleArithmetic() {
         // console.log(number1 * number2);
         break;
       case 3:
-        answer = (number1 / number2).toFixed(2);
+        answer = Number((number1 / number2).toFixed(1));
         // console.log(number1 / number2);
         break;
     }
-    answer = 0;
-    // console.log("\nЭто answer:");
+    // console.log("\nЭто answer после switch:");
     // console.log(answer);
+    // console.log(typeof (answer));
 
-    let userAnswerForChecks = (prompt(`Решите задачу:\n${task} =\nОтвет впишите в поле ниже`)).trim();
-    // let userAnswer = Number(prompt(`Решите задачу:\n${task} =\nОтвет впишите в поле ниже`));
-    // console.log(userAnswer);
+    if (indexForMathOperation === 3) {
+      userAnswerForChecks = (prompt(`Решите задачу:\n${task} =\nОтвет впишите в поле ниже в виде числа с округлением до одного знака после запятой`)).trim();
+    } else {
+      userAnswerForChecks = (prompt(`Решите задачу:\n${task} =\nОтвет впишите в поле ниже в виде числа`)).trim();
+    }
 
     if (userAnswerForChecks === null) {
       break;
     }
 
+    if (userAnswerForChecks === "") {
+      alert("Вы ничего не ответили");
+      continue;
+    }
+
     // console.log("\nЭто ответ пользователя до проверки");
     // console.log(userAnswerForChecks);
-    // console.log(typeof(userAnswerForChecks));
+    // console.log(typeof (userAnswerForChecks));
 
     if (userAnswerForChecks.includes(',')) {
-      userAnswerForChecks = userAnswerForChecks.replace(',', '.');
+      userAnswerForChecks = Number(userAnswerForChecks.replace(',', '.'));
       // console.log("\nЭто ответ пользователя в проверке");
       // console.log(userAnswerForChecks);
+      // console.log(typeof (userAnswerForChecks));
     }
 
     // console.log("\nЭто ответ пользователя после проверки");
     // console.log(userAnswerForChecks);
+    // console.log(typeof (userAnswerForChecks));
 
-    if (indexForMathOperation === 3) {
-      userAnswer = Number(userAnswerForChecks).toFixed(2);
-      // console.log("\nЭто ответ пользователя после округления");
-      // console.log(userAnswer);
-    } else {
-      userAnswer = Number(userAnswerForChecks);
+    // console.log("\nРезультат Number(userAnswerForChecks):");
+    // console.log(Number(userAnswerForChecks));
+    // console.log("\nПроверка userAnswerForChecks на isNaN:");
+    // console.log(isNaN(Number(userAnswerForChecks)));
+
+    if (isNaN(Number(userAnswerForChecks))) {
+      alert("Вы ввели не число");
+      continue;
     }
 
-    if (userAnswer === answer || userAnswerForChecks !== "" && userAnswerForChecks === '0' && typeof(userAnswerForChecks) === string && answer === 0) {
-    // if (userAnswer === answer) {
-      alert("Ваш ответ верный!")
+    // console.log("\nЭто ответ answer перед заменой запятой на точку:");
+    // console.log(answer);
+    // console.log(typeof (answer));
+    if (indexForMathOperation === 3) {
+      if (String(answer).includes(".")) {
+        userAnswer = String((Number(userAnswerForChecks)).toFixed(1));
+        // console.log("\nЭто ответ пользователя после округления:");
+        // console.log(userAnswer);
+        // console.log(typeof (userAnswer));
+      }
+      // не number, т.к. с number при правильном ответе 0 нажатие кнопки "Ок" или "Enter" приводит к правильному ответу, поэтому сравниваем строки в проверках
+      userAnswer = String(userAnswerForChecks);
     } else {
-      alert("Ошибка.")
+      userAnswer = String(userAnswerForChecks);
+    }
+
+    answer = String(answer);
+    // console.log("\nЭто ответ userAnswer перед алертом:");
+    // console.log(userAnswer);
+    // console.log(typeof (userAnswer));
+    // console.log("\nЭто ответ answer перед алертом:");
+    // console.log(answer);
+    // console.log(typeof (answer));
+
+    // тип данных д.б. в кавычках!!! typeof (userAnswerForChecks) === 'string'
+    if (userAnswer === answer || userAnswerForChecks !== "" && userAnswerForChecks === '0' && typeof (userAnswerForChecks) === 'string' && answer === '0') {
+      alert(`Ваш ответ верный!\n${task} = ${answer}`)
+    } else {
+      alert(`Ошибка\nВы ответили ${userAnswer}\nПравильный ответ: ${task} = ${answer}`)
     }
   }
 }
