@@ -84,36 +84,26 @@ function simpleArithmetic() {
     let userAnswerForChecks;
 
     let indexForMathOperation = Math.round(Math.random() * 3);
-    // console.log(indexForMathOperation);
 
     let operation = mathOperations[indexForMathOperation];
-    // console.log(operation);
 
     let task = String(number1) + " " + operation + " " + String(number2);
-    // let task = String(3) + "-" + String(3);
 
 
     switch (indexForMathOperation) {
       case 0:
         answer = number1 + number2;
-        // console.log(number1 + number2);
         break;
       case 1:
         answer = number1 - number2;
-        // console.log(number1 - number2);
         break;
       case 2:
         answer = number1 * number2;
-        // console.log(number1 * number2);
         break;
       case 3:
         answer = Number((number1 / number2).toFixed(1));
-        // console.log(number1 / number2);
         break;
     }
-    // console.log("\nЭто answer после switch:");
-    // console.log(answer);
-    // console.log(typeof (answer));
 
     if (indexForMathOperation === 3) {
       userAnswerForChecks = (prompt(`Решите задачу:\n${task} =\nОтвет впишите в поле ниже в виде числа с округлением до одного знака после запятой`)).trim();
@@ -130,56 +120,28 @@ function simpleArithmetic() {
       continue;
     }
 
-    // console.log("\nЭто ответ пользователя до проверки");
-    // console.log(userAnswerForChecks);
-    // console.log(typeof (userAnswerForChecks));
-
     if (userAnswerForChecks.includes(',')) {
       userAnswerForChecks = Number(userAnswerForChecks.replace(',', '.'));
-      // console.log("\nЭто ответ пользователя в проверке");
-      // console.log(userAnswerForChecks);
-      // console.log(typeof (userAnswerForChecks));
     }
-
-    // console.log("\nЭто ответ пользователя после проверки");
-    // console.log(userAnswerForChecks);
-    // console.log(typeof (userAnswerForChecks));
-
-    // console.log("\nРезультат Number(userAnswerForChecks):");
-    // console.log(Number(userAnswerForChecks));
-    // console.log("\nПроверка userAnswerForChecks на isNaN:");
-    // console.log(isNaN(Number(userAnswerForChecks)));
 
     if (isNaN(Number(userAnswerForChecks))) {
       alert("Вы ввели не число");
       continue;
     }
 
-    // console.log("\nЭто ответ answer перед заменой запятой на точку:");
-    // console.log(answer);
-    // console.log(typeof (answer));
     if (indexForMathOperation === 3) {
       if (String(answer).includes(".")) {
         userAnswer = String((Number(userAnswerForChecks)).toFixed(1));
-        // console.log("\nЭто ответ пользователя после округления:");
-        // console.log(userAnswer);
-        // console.log(typeof (userAnswer));
       }
-      // не number, т.к. с number при правильном ответе 0 нажатие кнопки "Ок" или "Enter" приводит к правильному ответу, поэтому сравниваем строки в проверках
+
       userAnswer = String(userAnswerForChecks);
+
     } else {
       userAnswer = String(userAnswerForChecks);
     }
 
     answer = String(answer);
-    // console.log("\nЭто ответ userAnswer перед алертом:");
-    // console.log(userAnswer);
-    // console.log(typeof (userAnswer));
-    // console.log("\nЭто ответ answer перед алертом:");
-    // console.log(answer);
-    // console.log(typeof (answer));
 
-    // тип данных д.б. в кавычках!!! typeof (userAnswerForChecks) === 'string'
     if (userAnswer === answer || userAnswerForChecks !== "" && userAnswerForChecks === '0' && typeof (userAnswerForChecks) === 'string' && answer === '0') {
       alert(`Ваш ответ верный!\n${task} = ${answer}`)
     } else {
