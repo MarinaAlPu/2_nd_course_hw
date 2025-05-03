@@ -277,27 +277,27 @@ const quiz = () => {
 
   for (let i = 0; i < quiz.length; i++) {
     let questionObject = quiz[i];
-    console.log(`\nЭто объект с вопросом ${i + 1}:`);
-    console.log(questionObject);
-    console.log("\nЭто сам вопрос:");
-    console.log(questionObject.question);
+    // console.log(`\nЭто объект с вопросом ${i + 1}:`);
+    // console.log(questionObject);
+    // console.log("\nЭто сам вопрос:");
+    // console.log(questionObject.question);
 
     let answers = questionObject.options;
-    console.log("\nЭто варианты ответов:");
-    console.log(answers);
+    // console.log("\nЭто варианты ответов:");
+    // console.log(answers);
 
     let correctAnswerNumber = questionObject.correctAnswer;
-    console.log("\nЭто номер ответа:");
-    console.log(correctAnswerNumber);
+    // console.log("\nЭто номер ответа:");
+    // console.log(correctAnswerNumber);
 
     // получить правильный ответ
     let correctAnswer = answers[correctAnswerNumber - 1].toLowerCase();
-    console.log("\nЭто правильный ответ из объекта:");
-    console.log(correctAnswer);
+    // console.log("\nЭто правильный ответ из объекта:");
+    // console.log(correctAnswer);
 
     correctAnswer = correctAnswer.split(" ")[1];
-    console.log("\nЭто правильный ответ:");
-    console.log(correctAnswer);
+    // console.log("\nЭто правильный ответ:");
+    // console.log(correctAnswer);
 
     let userAnswer = prompt(`Ответьте на вопрос:\n${questionObject.question}`)
 
@@ -311,23 +311,20 @@ const quiz = () => {
     }
 
     let userAnswerToLow = userAnswer.toLowerCase();
-    console.log("\nОтвет пользователя маленькими буквами:");
-    console.log(userAnswerToLow);
+    // console.log("\nОтвет пользователя маленькими буквами:");
+    // console.log(userAnswerToLow);
 
-    console.log("\nЭто правильный ответ перед проверкой:");
-    console.log(correctAnswer);
+    // console.log("\nЭто правильный ответ перед проверкой:");
+    // console.log(correctAnswer);
 
     // проверить, правильный ли ответ
     if (userAnswerToLow === correctAnswer) {
       correctAnswerCount++;
-      // correctAnswerCount += 1;
-      console.log("\nКоличество правильных ответов в проверке:");
-      console.log(correctAnswerCount);
-
-      // return correctAnswerCount;
+      // console.log("\nКоличество правильных ответов в проверке:");
+      // console.log(correctAnswerCount);
     }
-    console.log("\nКоличество правильных ответов:");
-    console.log(correctAnswerCount);
+    // console.log("\nКоличество правильных ответов:");
+    // console.log(correctAnswerCount);
   }
 
   switch (correctAnswerCount) {
@@ -344,6 +341,4 @@ const quiz = () => {
       alert(`Вы ответили правильно на все вопросы!`);
       break;
   }
-
-  // alert(`Вы ответили правильно на ${correctAnswerCount} вопросов`);
 }
