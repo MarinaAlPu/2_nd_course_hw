@@ -175,7 +175,7 @@ function reverseText() {
       alert("Вы ввели слишком длинный текст");
       continue;
     }
-    
+
     if (String(userInput) === "") {
       alert("Вы ничего не ввели")
       continue;
@@ -205,8 +205,8 @@ function reverseText() {
 
       let reversedString = arr[i].split("").reverse().join("");
       reversedArr.push(reversedString);
-      console.log("\nМассив из перевёрнутых строк:");
-      console.log(reversedArr);
+      // console.log("\nМассив из перевёрнутых строк:");
+      // console.log(reversedArr);
     }
     reversedArr.reverse()
     // console.log("\nИтоговый перевёрнутый массив из перевёрнутых строк:");
@@ -229,9 +229,7 @@ function reverseText() {
 Последовательность создания игры Викторина:
 
 Используйте предоставленный массив вопросов:
-Массив 
-quiz
- содержит три вопроса с вариантами ответов и правильными ответами.
+Массив quiz содержит три вопроса с вариантами ответов и правильными ответами.
 // Массив вопросов и правильных ответов
        const quiz = [
            {
@@ -250,13 +248,102 @@ quiz
                correctAnswer: 2
            }
        ];
-Запросите у пользователя ответы. Используйте функцию 
-prompt()
- для получения ответа пользователя на каждый вопрос.
+Запросите у пользователя ответы. Используйте функцию prompt() для получения ответа пользователя на каждый вопрос.
 Проверьте ответы и подсчитайте правильные:
 Сравните ответ пользователя с правильным ответом и увеличьте счетчик правильных ответов, если ответ верный.
 Выведите результат:
-В конце игры выведите количество правильных ответов с помощью 
-alert().*/
+В конце игры выведите количество правильных ответов с помощью alert().*/
 
+const quiz = () => {
+  const quiz = [
+    {
+      question: "Какой цвет небо?",
+      options: ["1. Красный", "2. Синий", "3. Зеленый"],
+      correctAnswer: 2 // номер правильного ответа
+    },
+    {
+      question: "Сколько дней в неделе?",
+      options: ["1. Шесть", "2. Семь", "3. Восемь"],
+      correctAnswer: 2
+    },
+    {
+      question: "Сколько у человека пальцев на одной руке?",
+      options: ["1. Четыре", "2. Пять", "3. Шесть"],
+      correctAnswer: 2
+    }
+  ];
 
+  let correctAnswerCount = 0;
+
+  for (let i = 0; i < quiz.length; i++) {
+    let questionObject = quiz[i];
+    console.log(`\nЭто объект с вопросом ${i + 1}:`);
+    console.log(questionObject);
+    console.log("\nЭто сам вопрос:");
+    console.log(questionObject.question);
+
+    let answers = questionObject.options;
+    console.log("\nЭто варианты ответов:");
+    console.log(answers);
+
+    let correctAnswerNumber = questionObject.correctAnswer;
+    console.log("\nЭто номер ответа:");
+    console.log(correctAnswerNumber);
+
+    // получить правильный ответ
+    let correctAnswer = answers[correctAnswerNumber - 1].toLowerCase();
+    console.log("\nЭто правильный ответ из объекта:");
+    console.log(correctAnswer);
+
+    correctAnswer = correctAnswer.split(" ")[1];
+    console.log("\nЭто правильный ответ:");
+    console.log(correctAnswer);
+
+    let userAnswer = prompt(`Ответьте на вопрос:\n${questionObject.question}`)
+
+    // если ответ - число, то перевести его в слово
+    if (userAnswer === '7') {
+      userAnswer = "семь";
+    }
+
+    if (userAnswer === '5') {
+      userAnswer = "пять";
+    }
+
+    let userAnswerToLow = userAnswer.toLowerCase();
+    console.log("\nОтвет пользователя маленькими буквами:");
+    console.log(userAnswerToLow);
+
+    console.log("\nЭто правильный ответ перед проверкой:");
+    console.log(correctAnswer);
+
+    // проверить, правильный ли ответ
+    if (userAnswerToLow === correctAnswer) {
+      correctAnswerCount++;
+      // correctAnswerCount += 1;
+      console.log("\nКоличество правильных ответов в проверке:");
+      console.log(correctAnswerCount);
+
+      // return correctAnswerCount;
+    }
+    console.log("\nКоличество правильных ответов:");
+    console.log(correctAnswerCount);
+  }
+
+  switch (correctAnswerCount) {
+    case 0:
+      alert(`Вы не ответили правильно ни на один вопрос`);
+      break;
+    case 1:
+      alert(`Вы ответили правильно на один вопрос`);
+      break;
+    case 2:
+      alert(`Вы ответили правильно на два вопроса`);
+      break;
+    case 3:
+      alert(`Вы ответили правильно на все вопросы!`);
+      break;
+  }
+
+  // alert(`Вы ответили правильно на ${correctAnswerCount} вопросов`);
+}
