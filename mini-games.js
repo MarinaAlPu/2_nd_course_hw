@@ -149,3 +149,173 @@ function simpleArithmetic() {
     }
   }
 }
+
+
+// Описание игры для сайта («Переверни текст»)
+/* Описание: создайте игру, где пользователю нужно ввести текст, который будет перевернут.
+Требования:
+Сайт запрашивает у пользователя текст.
+Сайт переворачивает введенный текст.
+Сайт выводит перевернутый текст.*/
+
+function reverseText() {
+  while (true) {
+    let reversedArr = [];
+    let reversedUserInput = "";
+
+    // получить текст от пользователя
+    let userInput = prompt("Введите любой текст. Максимальная длина текста 20 символов")
+
+    // проверить введённый текст
+    if (userInput === null) {
+      break;
+    }
+
+    if (userInput.length > 20) {
+      alert("Вы ввели слишком длинный текст");
+      continue;
+    }
+
+    if (String(userInput) === "") {
+      alert("Вы ничего не ввели")
+      continue;
+    }
+
+    // перевернуть текст 
+    let arr = userInput.split(" ");
+    // console.log("\nМассив строк ввода пользователя, разделённый по пробелу:");
+    // console.log(arr);
+    // console.log("\nДлина массива строк ввода пользователя, разделённый по пробелу:");
+    // console.log(arr.length);
+
+    for (let i = 0; i < arr.length; i++) {
+      // let strSplited = arr[i].split("");
+      // console.log("\ni-тая строка, разбитая на символы в массив:");
+      // console.log(strSplited);
+      // let strReversed = strSplited.reverse();
+      // console.log("\nПеревёрнутый массив");
+      // console.log(strReversed);
+      // let strJoined = strReversed.join("");
+      // console.log("\nСтрока, соединённая из перевёрнутого массива:");
+      // console.log(strJoined);
+
+      // reversedArr.push(strJoined);
+      // console.log("\nМассив из перевёрнутых строк:");
+      // console.log(reversedArr);
+
+      let reversedString = arr[i].split("").reverse().join("");
+      reversedArr.push(reversedString);
+      // console.log("\nМассив из перевёрнутых строк:");
+      // console.log(reversedArr);
+    }
+    reversedArr.reverse()
+    // console.log("\nИтоговый перевёрнутый массив из перевёрнутых строк:");
+    // console.log(reversedArr);
+
+    reversedUserInput = reversedArr.join(" ");
+
+    //вывести перевёрнутый текст
+    alert(`Вы ввели: ${userInput}\nПеревёрнутый текст: ${reversedUserInput}`)
+  }
+}
+
+
+// Описание игры для сайта («Викторина»)
+/* Описание: создайте простую викторину с несколькими вопросами и вариантами ответов.
+Требования:
+Сайт предлагает несколько вопросов и вариантов ответов.
+Запрашивает у пользователя ответы на каждый вопрос.
+Подсчитывает и выводит количество правильных ответов.
+Последовательность создания игры Викторина:
+
+Используйте предоставленный массив вопросов:
+Массив quiz содержит три вопроса с вариантами ответов и правильными ответами.
+// Массив вопросов и правильных ответов
+       const quiz = [
+           {
+               question: "Какой цвет небо?",
+               options: ["1. Красный", "2. Синий", "3. Зеленый"],
+               correctAnswer: 2 // номер правильного ответа
+           },
+           {
+               question: "Сколько дней в неделе?",
+               options: ["1. Шесть", "2. Семь", "3. Восемь"],
+               correctAnswer: 2
+           },
+           {
+               question: "Сколько у человека пальцев на одной руке?",
+               options: ["1. Четыре", "2. Пять", "3. Шесть"],
+               correctAnswer: 2
+           }
+       ];
+Запросите у пользователя ответы. Используйте функцию prompt() для получения ответа пользователя на каждый вопрос.
+Проверьте ответы и подсчитайте правильные:
+Сравните ответ пользователя с правильным ответом и увеличьте счетчик правильных ответов, если ответ верный.
+Выведите результат:
+В конце игры выведите количество правильных ответов с помощью alert().*/
+
+const quiz = () => {
+  const quiz = [
+    {
+      question: "Какой цвет небо?",
+      options: ["1. Красный", "2. Синий", "3. Зеленый"],
+      correctAnswer: 2 // номер правильного ответа
+    },
+    {
+      question: "Сколько дней в неделе?",
+      options: ["1. Шесть", "2. Семь", "3. Восемь"],
+      correctAnswer: 2
+    },
+    {
+      question: "Сколько у человека пальцев на одной руке?",
+      options: ["1. Четыре", "2. Пять", "3. Шесть"],
+      correctAnswer: 2
+    }
+  ];
+
+  let correctAnswerCount = 0;
+
+  for (let i = 0; i < quiz.length; i++) {
+    let questionObject = quiz[i];
+    let answers = questionObject.options;
+    let correctAnswerNumber = questionObject.correctAnswer;
+
+    // получить правильный ответ
+    let correctAnswer = answers[correctAnswerNumber - 1].toLowerCase();
+
+    correctAnswer = correctAnswer.split(" ")[1];
+
+    let userAnswer = prompt(`Ответьте на вопрос:\n${questionObject.question}`)
+
+    // если ответ - число, то перевести его в слово
+    if (userAnswer === '7') {
+      userAnswer = "семь";
+    }
+
+    if (userAnswer === '5') {
+      userAnswer = "пять";
+    }
+
+    let userAnswerToLow = userAnswer.toLowerCase();
+
+    // проверить, правильный ли ответ
+    if (userAnswerToLow === correctAnswer) {
+      correctAnswerCount++;
+    }
+  }
+
+  switch (correctAnswerCount) {
+    case 0:
+      alert(`Вы не ответили правильно ни на один вопрос`);
+      break;
+    case 1:
+      alert(`Вы ответили правильно на один вопрос`);
+      break;
+    case 2:
+      alert(`Вы ответили правильно на два вопроса`);
+      break;
+    case 3:
+      alert(`Вы ответили правильно на все вопросы!`);
+      break;
+  }
+}
