@@ -344,7 +344,7 @@ const quiz = () => {
 Выведите выборы пользователя и компьютера.
 Сообщите результат игры: победа, поражение или ничья. */
 
-const rockPaperScissors = () => {
+const rockScissorsPaper = () => {
   const array = ["камень", "ножницы", "бумага"];
 
   while (true) {
