@@ -350,19 +350,11 @@ const rockPaperScissors = () => {
   while (true) {
     // сгенерировать случайный выбор компьютера
     let index = Math.round(Math.random() * (array.length - 1));
-    // console.log("\nСлучайный индекс:");
-    // console.log(index);
     let answer = array[index];
-    // console.log("\nСлучайный ответ по индексу:");
-    // console.log(answer);
 
 
     // получить и обработать ответ пользователя
     let userAnswer = prompt("Сделайте выбор: камень, ножницы или бумага\nВыбранный ответ впишите в поле ниже");
-    // console.log("\nОтвет пользователя:");
-    // console.log(userAnswer);
-    // console.log("\nДлина ответ пользователя:");
-    // console.log(userAnswer.length);
 
     if (userAnswer === null) {
       break;
@@ -374,10 +366,6 @@ const rockPaperScissors = () => {
     }
 
     userAnswer = userAnswer.trim().toLowerCase()
-    // console.log("\nОтвет пользователя в нижнем регистре с отрезанными пробелами:");
-    // console.log(userAnswer);
-    // console.log("\nДлина ответ пользователя:");
-    // console.log(userAnswer.length);
 
     if (userAnswer.length === 0) {
       alert("Вы не ввели выбранный ответ\nНажмите кнопку 'ОК' и попробуйте ещё раз");
@@ -386,59 +374,25 @@ const rockPaperScissors = () => {
 
     // удалить пробелы между буквами
     const arrWithoutSpace = [];
-    // let userUnswerWithoutSpace;
-    // const arr = userAnswer.split("")
-    // console.log("\nМассив из символов, введённых пользователем:");
-    // console.log(arr);
-    // console.log("\nДлина массива из символов, введённых пользователем:");
-    // console.log(arr.length);
-
     for (let i = 0; i < userAnswer.split("").length; i++) {
-      // console.log("\nЭлемент массива в цикле for:");
-      // console.log(arr[i]);
       if (userAnswer.split("")[i] !== " ") {
-        // console.log("\nЭлемент массива в цикле if:");
-        // console.log(arr[i]);
         arrWithoutSpace.push(userAnswer.split("")[i]);
-        // console.log("\nМассив из символов, введённых пользователем, после удаления пробелов в цикле:");
-        // console.log(arrWithoutSpace);
       }
     }
-    // console.log("\nМассив из символов, введённых пользователем, после удаления пробелов после цикла:");
-    // console.log(arrWithoutSpace);
-
-    // userUnswerWithoutSpace = arrWithoutSpace.join("");
-    // console.log("\nОтвет пользователя без пробелов пробелов:");
-    // console.log(userUnswerWithoutSpace);
-
-    // userAnswer = userUnswerWithoutSpace;
     userAnswer = arrWithoutSpace.join("");
 
 
+    // проверка ответа пользователя
     if (!array.includes(userAnswer)) {
-      // console.log("\nответа пользователя нет в массиве");
       alert("Вы выбрали ответ не из предложенного списка\nНажмите кнопку 'ОК' и попробуйте ещё раз");
     }
 
     if (array.includes(userAnswer)) {
-      // console.log("\nответ пользователя есть в массиве");
-
       if (userAnswer === answer) {
-        // console.log("\nответ пользователя совпал с выбором компьютера");
         alert(`Вы выбрали: ${userAnswer}\nКомпьютер выбрал: ${answer}\nНичья!`);
-      }
-
-      if (userAnswer === "камень" && answer === "ножницы" ||
-        userAnswer === "ножницы" && answer === "бумага" ||
-        userAnswer === "бумага" && answer === "камень") {
-        // console.log(`\nответ пользователя ${userAnswer}, ответ компьютера ${answer}`)
+      } else if (userAnswer === "камень" && answer === "ножницы" || userAnswer === "ножницы" && answer === "бумага" || userAnswer === "бумага" && answer === "камень") {
         alert(`Вы выбрали: ${userAnswer}\nКомпьютер выбрал: ${answer}\nВы победили!`);
-      }
-
-      if (userAnswer === "ножницы" && answer === "камень" ||
-        userAnswer === "бумага" && answer === "ножницы" ||
-        userAnswer === "камень" && answer === "бумага") {
-        // console.log(`\nответ пользователя ${userAnswer}, ответ компьютера ${answer}`)
+      } else if (userAnswer === "ножницы" && answer === "камень" || userAnswer === "бумага" && answer === "ножницы" || userAnswer === "камень" && answer === "бумага") {
         alert(`Вы выбрали: ${userAnswer}\nКомпьютер выбрал: ${answer}\nВы проиграли :(`);
       }
     }
