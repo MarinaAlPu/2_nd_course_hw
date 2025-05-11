@@ -69,7 +69,7 @@
 
   <p class="homework">Задание 7</p>
   <p class="desc description7">Просто параграф</p>
-  <p class="desc description">Этот параграф удалится при нажатии кнопки""</p>
+  <p class="desc description">Этот параграф удалится при нажатии кнопки"Удалить элемент"</p>
   <p class="desc description">Второй параграф с нужным классом</p>
   <button id="button7" class="button">Удалить элемент</button>
 
@@ -163,7 +163,9 @@
    const descriptionEl = document.querySelector(".description");
 
    btn7El.addEventListener("click", function(e) {
-    descriptionEl.remove();
+    if (descriptionEl) {
+      descriptionEl.remove();
+    }
    })
   </script>
 </body>
