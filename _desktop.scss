@@ -68,6 +68,12 @@
 
   }
 
+  .animated-strip {
+    &__content {
+      width: 250%;
+    }
+  }
+
   .about-games {
     padding-top: 60px;
     padding-bottom: 40px;
@@ -169,6 +175,22 @@
         font-size: 22px;
         line-height: 120%;
       }
+    }
+  }
+}
+
+@media (min-width: 1081px) and (max-width: 1590px) {
+  .animated-strip {
+    &__content {
+      width: 300%;
+    }
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1080px) {
+  .animated-strip {
+    &__content {
+      width: 350%;
     }
   }
 }

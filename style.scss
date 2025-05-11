@@ -89,16 +89,51 @@ button {
 
 }
 
+// .animated-strip {
+//   width: 100%;
+//   height: 87px;
+//   overflow: hidden;
+//   margin-top: -87px;
+//   // animation: animated-strip 15s infinite linear;
+
+//   &__content {
+//     width: 3220px;
+//     // width: 100%;
+//     background-color: #BCEC30;
+//     border: 1px solid rgba(255, 255, 255, 0.20);
+//     color: #202027;
+//     font-size: 30px;
+//     font-weight: 700;
+//     line-height: 110%;
+//     letter-spacing: 1.2px;
+//     text-transform: uppercase;
+//     padding: 27px;
+//     // display: flex;
+//     display: inline-flex;
+//     flex-direction: row;
+//     justify-content: center;
+//     align-items: center;
+//     gap: 51px;
+//     // position: absolute;
+//     z-index: 2;
+//     white-space: nowrap;
+//   }
+// }
+
 .animated-strip {
   width: 100%;
   height: 87px;
   overflow: hidden;
   margin-top: -87px;
-  animation: animated-strip 15s infinite linear;
-
+  // animation: animated-strip 15s infinite linear; //name duration timing-function delay iteration-count direction fill-mode;
+  background-color: #BCEC30;
+  display: flex;
+  // width: 3220px;
+  
   &__content {
-    width: 3220px;
-    background-color: #BCEC30;
+    // width: 3220px;
+    width: 200%;
+    // background-color: #BCEC30;
     border: 1px solid rgba(255, 255, 255, 0.20);
     color: #202027;
     font-size: 30px;
@@ -108,23 +143,75 @@ button {
     text-transform: uppercase;
     padding: 27px;
     display: flex;
+    // display: inline-flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 51px;
     // position: absolute;
     z-index: 2;
+    white-space: nowrap;
   }
 }
 
-@keyframes animated-strip {
-  from {
-    transform: translateX(0%);
+.animated-strip__content1 {
+  animation: animated-strip1 40s infinite linear;
+  animation-delay: -40s;
+}
+
+.animated-strip__content2 {
+  animation: animated-strip2 40s infinite linear;
+  animation-delay: -20s;
+}
+
+@keyframes animated-strip1 {
+  0% {
+    transform: translateX(100%);
   }
-  to {
+
+  100% {
     transform: translateX(-100%);
   }
 }
+
+
+@keyframes animated-strip2 {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-200%);
+  }
+}
+
+// .animated-strip__content1 {
+//   animation: animated-strip1 20s infinite linear;
+//   animation-delay: -20s;
+// }
+
+// .animated-strip__content2 {
+//   animation: animated-strip2 20s infinite linear;
+//   animation-delay: -10s;
+// }
+
+// @keyframes animated-strip1 {
+//   from {
+//     transform: translateX(0%);
+//   }
+//   to {
+//     transform: translateX(-100%);
+//   }
+// }
+
+// @keyframes animated-strip2 {
+//   from {
+//     transform: translateX(100%);
+//   }
+//   to {
+//     transform: translateX(0%);
+//   }
+// }
 
 .about-games {
   background-color: #202027;

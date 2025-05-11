@@ -83,11 +83,11 @@ button {
   height: 87px;
   overflow: hidden;
   margin-top: -87px;
-  animation: animated-strip 15s infinite linear;
+  background-color: #BCEC30;
+  display: flex;
 }
 .animated-strip__content {
-  width: 3220px;
-  background-color: #BCEC30;
+  width: 200%;
   border: 1px solid rgba(255, 255, 255, 0.2);
   color: #202027;
   font-size: 30px;
@@ -102,14 +102,33 @@ button {
   align-items: center;
   gap: 51px;
   z-index: 2;
+  white-space: nowrap;
 }
 
-@keyframes animated-strip {
-  from {
-    transform: translateX(0%);
+.animated-strip__content1 {
+  animation: animated-strip1 40s infinite linear;
+  animation-delay: -40s;
+}
+
+.animated-strip__content2 {
+  animation: animated-strip2 40s infinite linear;
+  animation-delay: -20s;
+}
+
+@keyframes animated-strip1 {
+  0% {
+    transform: translateX(100%);
   }
-  to {
+  100% {
     transform: translateX(-100%);
+  }
+}
+@keyframes animated-strip2 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-200%);
   }
 }
 .about-games {
@@ -785,6 +804,9 @@ button {
   .top__button {
     font-size: 22px;
   }
+  .animated-strip__content {
+    width: 250%;
+  }
   .about-games {
     padding-top: 60px;
     padding-bottom: 40px;
@@ -864,5 +886,15 @@ button {
     padding: 14px 28px;
     font-size: 22px;
     line-height: 120%;
+  }
+}
+@media (min-width: 1081px) and (max-width: 1590px) {
+  .animated-strip__content {
+    width: 300%;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1080px) {
+  .animated-strip__content {
+    width: 350%;
   }
 }/*# sourceMappingURL=style.css.map */
