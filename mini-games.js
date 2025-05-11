@@ -9,7 +9,7 @@
 function guessNumber() {
   // загадать целое число от 1 до 100
   let number = Math.round(Math.random() * 100);
-  console.log(`Загаданное число: ${number}`);
+  // console.log(`Загаданное число: ${number}`);
 
   while (true) {
     // преобразовать введённое пользователем значение в число
