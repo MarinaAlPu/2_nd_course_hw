@@ -83,6 +83,7 @@ button {
   height: 87px;
   overflow: hidden;
   margin-top: -87px;
+  animation: animated-strip 15s infinite linear;
 }
 .animated-strip__content {
   width: 3220px;
@@ -103,6 +104,14 @@ button {
   z-index: 2;
 }
 
+@keyframes animated-strip {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
 .about-games {
   background-color: #202027;
   padding-top: 94px;
