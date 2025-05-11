@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Домашка 9</title>
+  <style>
+    .homework {
+      font-size: 40px;
+      font-weight: bold;
+      font-style: italic;
+      text-decoration: underline;
+      margin-bottom: 0;
+    }
+
+    .homework:not(:first-child) {
+      margin-top: 60px;
+    }
+    
+    .button {
+      width: 250px;
+      height: 50px;
+      border-radius: 15px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .title1_hidden {
+      display: none;
+    }
+
+    .text2 {
+      font-size: 30px;
+    }
+    
+    .desc {
+      font-size: 25px;
+    }
+
+    </style>
+</head>
+<body>
+  <p class="homework">Задание 1</p>
+  <h1 class="title1">Заголовок 1</h1>
+  <button id="button1" class="button">Кнопка 1</button>
+
+  <p class="homework">Задание 2</p>
+  <p class="text2">Текст для второго задания. Цвет текста меняется при нажатии на кнопку "Изменить цвет текста"</p>
+  <button id="button2" class="button">Изменить цвет текста</button>
+
+  <p class="homework">Задание 3</p>
+  <h1 class="title3">Заголовок для третьего задания</h1>
+  <button id="button3" class="button" style="width: 500px; height: 50px">Изменить текст заголовка</button>
+
+  <p class="homework">Задание 4</p>
+  <p class="desc description4">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+  <p class="desc description4">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+  <button id="button4" class="button" style="width: 500px; height: 50px">Изменить все описания</button>
+
+  <p class="homework">Задание 5</p>
+  <p class="desc description5">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+  <p class="desc another_description5">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+  <p class="desc description5">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+  <p class="desc another_description5">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+  <button id="button5" class="button">Изменить текст</button>
+
+  <p class="homework">Задание 6</p>
+  <button id="button6" class="button" style="width: 500px; height: 50px; margin-top: 15px">Добавить элемент в конец документа</button>
+
+  <p class="homework">Задание 7</p>
+  <p class="desc description7">Просто параграф</p>
+  <p class="desc description">Этот параграф удалится при нажатии кнопки"Удалить элемент"</p>
+  <p class="desc description">Второй параграф с нужным классом</p>
+  <button id="button7" class="button">Удалить элемент</button>
+
+  <script>
+    // Задание 1
+    const title1El = document.querySelector(".title1");
+    const btn1El = document.querySelector("#button1");
+    
+    btn1El.addEventListener("click", function(e) { 
+      title1El.classList.toggle("title1_hidden");
+
+      const title1ElHidden = document.querySelector(".title1_hidden");
+      // console.log(title1ElHidden);
+
+      if(title1ElHidden) {
+        btn1El.textContent = "Показать заголовок";
+        btn1El.style.backgroundColor = "lightgreen";
+      } else if (!title1ElHidden) {
+        btn1El.textContent = "Скрыть заголовок";
+        btn1El.style.backgroundColor = "lightCoral";
+      }
+    })
+
+
+    // Задание 2
+    const text2El = document.querySelector(".text2");
+    const btn2El = document.querySelector("#button2");
+
+    const getRandomNumberForColor = () => Math.round(Math.random() * 256);
+    function getRandomColor() {
+      let red = getRandomNumberForColor();
+      let green = getRandomNumberForColor();
+      let blue = getRandomNumberForColor();
+      return `rgb(${red}, ${green}, ${blue})`;
+    }
+
+    btn2El.addEventListener("click", function (e) {
+      text2El.style.color = getRandomColor();
+    })
+
+
+    // Задание 3
+    const title3El = document.querySelector(".title3");
+    const btn3El = document.querySelector("#button3");
+    let newText3 = "Привет, мир!";
+
+    btn3El.addEventListener("click", function(e) {
+      title3El.textContent = newText3;
+    })
+
+
+    // Задание 4
+    const description4Elements = document.querySelectorAll(".description4");
+    const btn4El = document.getElementById("button4");
+    let newText4 = "Изменённый текст";
+    
+    btn4El.addEventListener("click", function (e) {
+      description4Elements.forEach(element => {
+        element.textContent = newText4;
+      });
+    })
+    
+    
+    // Задание 5
+    const description5Elements = document.querySelectorAll(".description5");
+    const btn5El = document.getElementById("button5");
+    let newText5 = "Новый текст";
+
+    btn5El.addEventListener("click", function(e) {
+      description5Elements.forEach((element) => {
+        element.textContent = newText5;
+      })
+    })
+
+
+    // Задание 6
+    const btn6El = document.getElementById("button6");
+    let newText6 = "Новый абзац в конце документа";
+    let newText6FontSize = "25px";
+
+    btn6El.addEventListener("click", function(e) {
+      const newTextEl = document.createElement("p");
+      newTextEl.textContent = newText6;
+      newTextEl.style.fontSize = newText6FontSize;
+      document.body.appendChild(newTextEl);
+    })
+
+
+    // Задание 7
+   const btn7El = document.querySelector("#button7");
+   const descriptionEl = document.querySelector(".description");
+
+   btn7El.addEventListener("click", function(e) {
+    if (descriptionEl) {
+      descriptionEl.remove();
+    }
+   })
+  </script>
+</body>
+</html>
