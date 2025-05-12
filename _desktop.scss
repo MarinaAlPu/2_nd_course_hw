@@ -68,11 +68,11 @@
 
   }
 
-  .animated-strip {
-    &__content {
-      // width: 250%;
-    }
-  }
+  // .animated-strip {
+  //   &__content {
+  //     // width: 250%;
+  //   }
+  // }
 
   .about-games {
     padding-top: 60px;
@@ -179,18 +179,18 @@
   }
 }
 
-@media (min-width: 1081px) and (max-width: 1590px) {
-  .animated-strip {
-    &__content {
-      // width: 300%;
-    }
-  }
-}
+// @media (min-width: 1081px) and (max-width: 1590px) {
+//   .animated-strip {
+//     &__content {
+//       // width: 300%;
+//     }
+//   }
+// }
 
-@media (min-width: 1025px) and (max-width: 1080px) {
-  .animated-strip {
-    &__content {
-      // width: 350%;
-    }
-  }
-}
+// @media (min-width: 1025px) and (max-width: 1080px) {
+//   .animated-strip {
+//     &__content {
+//       // width: 350%;
+//     }
+//   }
+// }
