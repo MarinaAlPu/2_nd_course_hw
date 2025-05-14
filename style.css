@@ -83,10 +83,10 @@ button {
   height: 87px;
   overflow: hidden;
   margin-top: -87px;
+  background-color: #BCEC30;
+  display: flex;
 }
 .animated-strip__content {
-  width: 3220px;
-  background-color: #BCEC30;
   border: 1px solid rgba(255, 255, 255, 0.2);
   color: #202027;
   font-size: 30px;
@@ -101,8 +101,35 @@ button {
   align-items: center;
   gap: 51px;
   z-index: 2;
+  white-space: nowrap;
 }
 
+.animated-strip__content1 {
+  animation: animated-strip1 40s infinite linear;
+  animation-delay: -40s;
+}
+
+.animated-strip__content2 {
+  animation: animated-strip2 40s infinite linear;
+  animation-delay: -20s;
+}
+
+@keyframes animated-strip1 {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes animated-strip2 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-200%);
+  }
+}
 .about-games {
   background-color: #202027;
   padding-top: 94px;
@@ -340,7 +367,6 @@ button {
     margin-top: -52px;
   }
   .animated-strip__content {
-    width: 1717px;
     border: 0.5px solid rgba(255, 255, 255, 0.2);
     font-size: 16px;
     line-height: 110%;
@@ -475,7 +501,6 @@ button {
     margin-top: -52px;
   }
   .animated-strip__content {
-    width: 1717px;
     border: 0.5px solid rgba(255, 255, 255, 0.2);
     font-size: 16px;
     line-height: 110%;
@@ -609,7 +634,6 @@ button {
     margin-top: -52px;
   }
   .animated-strip__content {
-    width: 1717px;
     border: 0.5px solid rgba(255, 255, 255, 0.2);
     font-size: 16px;
     line-height: 110%;
