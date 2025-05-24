@@ -154,7 +154,7 @@
     }
 
     &__card {
-      height: 450px;
+      height: 460px;
 
       &-content {
         padding: 42px;
@@ -168,6 +168,10 @@
       &-description {
         font-size: 22px;
         margin-bottom: 34px;
+
+        &_wide {
+          max-width: 330px;
+        }
       }
 
       &-button {
