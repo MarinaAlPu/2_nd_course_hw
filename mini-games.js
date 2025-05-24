@@ -401,3 +401,24 @@ const rockScissorsPaper = () => {
 
 
 // Описание игры для сайта ("Генератор случайных цветов")
+// Описание: При каждом клике на кнопку фон страницы меняется на случайный цвет.
+// Требования: Создайте кнопку, которая при нажатии меняет цвет фона (или другого элемента) на случайный.
+
+const getRandomColor = () => {
+  // const btnEl = document.getElementById("getRandomColorGame");
+  const backgroundAboutGamesEl = document.getElementById("about-games");
+  const backgroundMiniGamesEl = document.getElementById("mini-games");
+
+
+  const getRandomNumberForColor = () => Math.round(Math.random() * 256);
+
+  let red = getRandomNumberForColor();
+  let green = getRandomNumberForColor();
+  let blue = getRandomNumberForColor();
+
+  let color = `rgb(${red}, ${green}, ${blue})`;
+
+
+  backgroundAboutGamesEl.style.backgroundColor = color;
+  backgroundMiniGamesEl.style.backgroundColor = color;
+}

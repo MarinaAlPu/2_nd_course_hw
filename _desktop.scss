@@ -68,6 +68,12 @@
 
   }
 
+  // .animated-strip {
+  //   &__content {
+  //     // width: 250%;
+  //   }
+  // }
+
   .about-games {
     padding-top: 60px;
     padding-bottom: 40px;
@@ -148,7 +154,7 @@
     }
 
     &__card {
-      height: 450px;
+      height: 460px;
 
       &-content {
         padding: 42px;
@@ -162,6 +168,10 @@
       &-description {
         font-size: 22px;
         margin-bottom: 34px;
+
+        &_wide {
+          max-width: 330px;
+        }
       }
 
       &-button {
@@ -172,3 +182,19 @@
     }
   }
 }
+
+// @media (min-width: 1081px) and (max-width: 1590px) {
+//   .animated-strip {
+//     &__content {
+//       // width: 300%;
+//     }
+//   }
+// }
+
+// @media (min-width: 1025px) and (max-width: 1080px) {
+//   .animated-strip {
+//     &__content {
+//       // width: 350%;
+//     }
+//   }
+// }

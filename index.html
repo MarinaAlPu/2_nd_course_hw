@@ -40,7 +40,21 @@
   </div>
 
   <div class="animated-strip">
-    <div class="animated-strip__content">
+    <div class="animated-strip__content animated-strip__content1">
+      <p class="animated-strip__item">Викторина</p>
+      <img class="animated-strip__star" src="./images/star_for_animated_strip.svg" alt="Маленькая чёрная звёздочка">
+      <p class="animated-strip__item">Угадай число</p>
+      <img class="animated-strip__star" src="./images/star_for_animated_strip.svg" alt="Маленькая чёрная звёздочка">
+      <p class="animated-strip__item">Переверни текст</p>
+      <img class="animated-strip__star" src="./images/star_for_animated_strip.svg" alt="Маленькая чёрная звёздочка">
+      <p class="animated-strip__item">Простая арифметика</p>
+      <img class="animated-strip__star" src="./images/star_for_animated_strip.svg" alt="Маленькая чёрная звёздочка">
+      <p class="animated-strip__item">Камень, ножницы, бумага</p>
+      <img class="animated-strip__star" src="./images/star_for_animated_strip.svg" alt="Маленькая чёрная звёздочка">
+      <p class="animated-strip__item">Генератор случайных цветов</p>
+      <img class="animated-strip__star" src="./images/star_for_animated_strip.svg" alt="Маленькая чёрная звёздочка">
+    </div>
+    <div class="animated-strip__content animated-strip__content2">
       <p class="animated-strip__item">Викторина</p>
       <img class="animated-strip__star" src="./images/star_for_animated_strip.svg" alt="Маленькая чёрная звёздочка">
       <p class="animated-strip__item">Угадай число</p>
@@ -122,7 +136,7 @@
       <div id="mini-game_1" class="mini-games__card">
         <div class="mini-games__card-content">
           <h3 class="mini-games__card-name">Угадай число</h3>
-          <p class="mini-games__card-description">Попробуй угадать случайное<br>число от 1 до 100.</p>
+          <p class="mini-games__card-description">Попробуй угадать случайное число от 1 до 100.</p>
           <button class="mini-games__card-button" onclick="guessNumber()">Играть!</button>
         </div>
         <img class="mini-games__card-picture" src="./images/mini_games/covers/game_1.png" alt="Обложка игры 1">
@@ -131,14 +145,14 @@
         <img class="mini-games__card-picture" src="./images/mini_games/covers/game_2.png" alt="Обложка игры 2">
         <div class="mini-games__card-content">
           <h3 class="mini-games__card-name">Простая арифметика</h3>
-          <p class="mini-games__card-description">Попробуй решить простые<br>арифметические задачи.</p>
+          <p class="mini-games__card-description">Попробуй решить простые арифметические задачи.</p>
           <button class="mini-games__card-button" onclick="simpleArithmetic()">Играть!</button>
         </div>
       </div>
       <div id="mini-game_3" class="mini-games__card">
         <div class="mini-games__card-content">
           <h3 class="mini-games__card-name">Переверни текст</h3>
-          <p class="mini-games__card-description">Попробуй ввести текст, который<br>будет перевернут.</p>
+          <p class="mini-games__card-description">Попробуй ввести текст, который будет перевернут.</p>
           <button class="mini-games__card-button" onclick="reverseText()">Играть!</button>
         </div>
         <img class="mini-games__card-picture" src="./images/mini_games/covers/game_3.png" alt="Обложка игры 3">
@@ -147,14 +161,14 @@
         <img class="mini-games__card-picture" src="./images/mini_games/covers/game_4.png" alt="Обложка игры 4">
         <div class="mini-games__card-content">
           <h3 class="mini-games__card-name">Камень,<br>ножницы,<br>бумага</h3>
-          <p class="mini-games__card-description">Сыграй в популярную игру<br>против компьютера.</p>
+          <p class="mini-games__card-description">Сыграй в популярную игру против компьютера.</p>
           <button class="mini-games__card-button" onclick="rockScissorsPaper()">Играть!</button>
         </div>
       </div>
       <div id="mini-game_5" class="mini-games__card">
         <div class="mini-games__card-content">
           <h3 class="mini-games__card-name">Викторина</h3>
-          <p class="mini-games__card-description">Отвечай на вопросы викторины<br>с вариантами ответов.</p>
+          <p class="mini-games__card-description">Отвечай на вопросы викторины с вариантами ответов.</p>
           <button class="mini-games__card-button" onclick="quiz()">Играть!</button>
         </div>
         <img class="mini-games__card-picture" src="./images/mini_games/covers/game_5.png" alt="Обложка игры 5">
@@ -163,9 +177,9 @@
         <img class="mini-games__card-picture" src="./images/mini_games/covers/game_6.png" alt="Обложка игры 6">
         <div class="mini-games__card-content">
           <h3 class="mini-games__card-name">Генератор случайных цветов</h3>
-          <p class="mini-games__card-description">Игра, в которой при клике на кнопку фон страницы меняется на
+          <p class="mini-games__card-description mini-games__card-description_wide">Игра, в которой при клике на кнопку фон страницы меняется на
             случайный.</p>
-          <button class="mini-games__card-button">Играть!</button>
+          <button id="getRandomColorGame" class="mini-games__card-button" onclick="getRandomColor()">Играть!</button>
         </div>
       </div>
     </div>
